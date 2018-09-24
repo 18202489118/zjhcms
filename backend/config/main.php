@@ -26,6 +26,7 @@ return [
 //            '*',//允许全部通过
             'site/login',
             'site/logout',
+            'site/captcha',
         ]
     ],
     'modules' => [
