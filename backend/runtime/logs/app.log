@@ -1,0 +1,224 @@
+2018-09-20 20:54:48 [127.0.0.1][1][rpb3lptfjoaq0vc1g0cfq14glv][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: 您没有执行此操作的权限。 in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\AccessControl.php:88
+Stack trace:
+#0 E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\AccessControl.php(73): mdm\admin\components\AccessControl->denyAccess(Object(yii\web\User))
+#1 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\ActionFilter.php(75): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('test/index', Array)
+#8 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\XAMPP\htdocs\www1\advanced\backend\web\index.php(26): yii\base\Application->run()
+#10 {main}
+2018-09-20 20:54:50 [127.0.0.1][1][rpb3lptfjoaq0vc1g0cfq14glv][error][yii\i18n\PhpMessageSource::loadFallbackMessages] The message file for category 'rbac-admin' does not exist: E:\XAMPP\htdocs\www1\advanced\backend/messages/zh-CN/rbac-admin.php Fallback file does not exist as well: E:\XAMPP\htdocs\www1\advanced\backend/messages/zh/rbac-admin.php
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:205
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:200
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:131
+2018-09-20 20:54:45 [127.0.0.1][1][rpb3lptfjoaq0vc1g0cfq14glv][info][application] $_COOKIE = [
+    '_identity-backend' => '04a939aa5c01b052b4a1483b7251da59402d25d2668a5f2ab41335490ea21b77a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"1WXjPfw1FGRehPbyVTsU8IDRjrtnxlSk\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/XAMPP/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/XAMPP/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'advanced.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity-backend=04a939aa5c01b052b4a1483b7251da59402d25d2668a5f2ab41335490ea21b77a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%221WXjPfw1FGRehPbyVTsU8IDRjrtnxlSk%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\svn\\bin;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\XAMPP\\php;E:\\XAMPP\\mysql\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.0.2o PHP/7.1.20 Server at advanced.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.0.2o PHP/7.1.20'
+    'SERVER_NAME' => 'advanced.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/htdocs/www1/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/htdocs/www1/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/htdocs/www1/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50074'
+    'REDIRECT_URL' => '/tests.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tests.html'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537448085.466
+    'REQUEST_TIME' => 1537448085
+]
+2018-09-22 08:54:56 [127.0.0.1][1][3sc33rov63djc7uakpnmarofgk][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: 您没有执行此操作的权限。 in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\AccessControl.php:88
+Stack trace:
+#0 E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\AccessControl.php(73): mdm\admin\components\AccessControl->denyAccess(Object(yii\web\User))
+#1 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\ActionFilter.php(75): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('test/index', Array)
+#8 E:\XAMPP\htdocs\www1\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\XAMPP\htdocs\www1\advanced\backend\web\index.php(26): yii\base\Application->run()
+#10 {main}
+2018-09-22 08:54:56 [127.0.0.1][1][3sc33rov63djc7uakpnmarofgk][error][yii\i18n\PhpMessageSource::loadFallbackMessages] The message file for category 'rbac-admin' does not exist: E:\XAMPP\htdocs\www1\advanced\backend/messages/zh-CN/rbac-admin.php Fallback file does not exist as well: E:\XAMPP\htdocs\www1\advanced\backend/messages/zh/rbac-admin.php
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:205
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:200
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:131
+2018-09-22 08:54:55 [127.0.0.1][1][3sc33rov63djc7uakpnmarofgk][info][application] $_COOKIE = [
+    '_identity-backend' => '04a939aa5c01b052b4a1483b7251da59402d25d2668a5f2ab41335490ea21b77a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"1WXjPfw1FGRehPbyVTsU8IDRjrtnxlSk\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/XAMPP/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/XAMPP/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'advanced.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity-backend=04a939aa5c01b052b4a1483b7251da59402d25d2668a5f2ab41335490ea21b77a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%221WXjPfw1FGRehPbyVTsU8IDRjrtnxlSk%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\svn\\bin;E:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\XAMPP\\php;E:\\XAMPP\\mysql\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.0.2o PHP/7.1.20 Server at advanced.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.0.2o PHP/7.1.20'
+    'SERVER_NAME' => 'advanced.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/htdocs/www1/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/htdocs/www1/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/htdocs/www1/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53990'
+    'REDIRECT_URL' => '/tests.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tests.html'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537577694.938
+    'REQUEST_TIME' => 1537577694
+]
+2018-09-22 23:20:16 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadFallbackMessages] The message file for category 'rbac-admin' does not exist: E:\XAMPP\htdocs\www1\advanced\backend/messages/zh-CN/rbac-admin.php Fallback file does not exist as well: E:\XAMPP\htdocs\www1\advanced\backend/messages/zh/rbac-admin.php
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:205
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:200
+    in E:\XAMPP\htdocs\www1\advanced\vendor\mdmsoft\yii2-admin\components\MenuHelper.php:131
+2018-09-22 23:20:15 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'hfdvgccf2u51m9u1bd9d4l9no7'
+    '_csrf-backend' => 'd5f16bc4c25f009203c2350de4f1a3640a9697834ed17fa6972100455c192c2da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"SaUqr7AQU4a_LdZbCXXrWFMIgjGEC5Ls\";}'
+    '_identity-backend' => '04a939aa5c01b052b4a1483b7251da59402d25d2668a5f2ab41335490ea21b77a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"1WXjPfw1FGRehPbyVTsU8IDRjrtnxlSk\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/XAMPP/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/XAMPP/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/XAMPP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/XAMPP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://backend.com/user-backend/signup.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=hfdvgccf2u51m9u1bd9d4l9no7; _csrf-backend=d5f16bc4c25f009203c2350de4f1a3640a9697834ed17fa6972100455c192c2da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22SaUqr7AQU4a_LdZbCXXrWFMIgjGEC5Ls%22%3B%7D; _identity-backend=04a939aa5c01b052b4a1483b7251da59402d25d2668a5f2ab41335490ea21b77a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%221WXjPfw1FGRehPbyVTsU8IDRjrtnxlSk%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;E:\\svn\\bin;E:\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\XAMPP\\php;E:\\XAMPP\\mysql\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.0.2o PHP/7.1.20 Server at backend.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.0.2o PHP/7.1.20'
+    'SERVER_NAME' => 'backend.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/XAMPP/htdocs/www1/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/XAMPP/htdocs/www1/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/XAMPP/htdocs/www1/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '60612'
+    'REDIRECT_URL' => '/user-backends.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-backends.html'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1537629615.626
+    'REQUEST_TIME' => 1537629615
+]
