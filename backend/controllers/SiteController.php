@@ -2,6 +2,7 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\captcha\CaptchaAction;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -47,10 +48,20 @@ class SiteController extends Controller
      */
     public function actions()
     {
+        $captcha = [
+            'class' => CaptchaAction::className(),
+            'backColor' => 0x66b3ff,//背景颜色
+            'maxLength' => 4,//最大显示个数
+            'minLength' => 4,//最少显示个数
+            'padding' => 6,//验证码字体大小，数值越小字体越大
+            'height' => 34,//高度
+            'width' => 100,//宽度
+            'foreColor' => 0xffffff,//字体颜色
+            'offset' => 13,//设置字符偏移量
+        ];
+//        if( YII_ENV_TEST ) $captcha = array_merge($captcha, ['fixedVerifyCode'=>'testme']);
         return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
+            'captcha' => $captcha
         ];
     }
 
