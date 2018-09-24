@@ -23,6 +23,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Verification Code' => '验证码',
+    'Verification code error.' => '验证码错误',
     'Unknown alias: -{name}' => '未知的别名: -{name}',
     '(not set)' => '(未设置)',
     'An internal server error occurred.' => '服务器内部错误。',
