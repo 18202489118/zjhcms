@@ -35,3 +35,4 @@ phpunit.phar
 /backend/runtime/*
 /frontend/runtime/*
 /api/runtime/*
+/vendor
