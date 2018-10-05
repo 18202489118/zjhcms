@@ -47,11 +47,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
         //#################PJAX########################
         'pjax' => true,
-        'pjaxSettings' => [
-            'neverTimeout' => true,
-            'beforeGrid' => '之前的我喜欢的内容。',
-            'afterGrid' => '我以后喜欢的内容。',
-        ],
+//        'pjaxSettings' => [
+//            'neverTimeout' => true,
+//            'beforeGrid' => '之前的我喜欢的内容。',
+//            'afterGrid' => '我以后喜欢的内容。',
+//        ],
 
 
         //##################TOOLBAR#######################
@@ -152,7 +152,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'heading' => true,
                 'heading' => '<h3 class="panel-title"><i class="glyphicon glyphicon-globe"></i> Countries</h3>',
 //                'before' => '<div style="margin-top:8px">{summary}</div>',
-                'before' => '<div style="margin-top:8px">这里可以写点什么</div>',
+                'before' => '<div style="margin-top:8px;color: red">Tips:这里可以写点提示信息</div>',
             ],
 
         'rowOptions' => function ($model) {

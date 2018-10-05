@@ -44,7 +44,7 @@ class UserBackendSearch extends UserBackend
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => ['pageSize' => 8]
+            'pagination' => ['pageSize' => 7]
         ]);
 
         $this->load($params);
