@@ -11,26 +11,12 @@ use kartik\widgets\DatePicker;
 
 $this->title = Yii::t('com', 'Admin');
 $this->params['breadcrumbs'][] = $this->title;
+
+echo $this->render('/layouts/alert', [
+    'res' => $res
+]);
 ?>
 <div class="user-backend-index">
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-    <p></p>
-    <?php
-    use kartik\widgets\Alert;
-
-    if($res['flag'] !== false){
-        echo Alert::widget([
-            'type' => Alert::TYPE_SUCCESS,
-            'title' => $res['msg'],
-            'icon' => 'glyphicon glyphicon-ok-sign',
-//            'body' => 'You successfully read this important alert message.',
-//            'showSeparator' => true,
-            'delay' => 1500
-        ]);
-    }
-    ?>
-
     <?=
     GridView::widget([
         'dataProvider' => $dataProvider,
