@@ -9,6 +9,19 @@ use yii\widgets\DetailView;
 $this->title = $model->username;
 $this->params['breadcrumbs'][] = ['label' => '管理员', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+
+use kartik\widgets\Alert;
+
+if($res['flag'] !== false){
+    echo Alert::widget([
+        'type' => Alert::TYPE_SUCCESS,
+        'title' => $res['msg'],
+        'icon' => 'glyphicon glyphicon-ok-sign',
+//            'body' => 'You successfully read this important alert message.',
+//            'showSeparator' => true,
+        'delay' => 1500
+    ]);
+}
 ?>
 <div class="user-backend-view">
 

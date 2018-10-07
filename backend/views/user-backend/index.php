@@ -19,14 +19,16 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php
     use kartik\widgets\Alert;
 
-    echo Alert::widget([
-        'type' => Alert::TYPE_SUCCESS,
-        'title' => 'Well done!',
-        'icon' => 'glyphicon glyphicon-ok-sign',
-        'body' => 'You successfully read this important alert message.',
-        'showSeparator' => true,
-        'delay' => 2000
-    ]);
+    if($res['flag'] !== false){
+        echo Alert::widget([
+            'type' => Alert::TYPE_SUCCESS,
+            'title' => $res['msg'],
+            'icon' => 'glyphicon glyphicon-ok-sign',
+//            'body' => 'You successfully read this important alert message.',
+//            'showSeparator' => true,
+            'delay' => 1500
+        ]);
+    }
     ?>
 
     <?=
@@ -150,7 +152,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'type' => GridView::TYPE_INFO,
                 'heading' => true,
-                'heading' => '<h3 class="panel-title"><i class="glyphicon glyphicon-globe"></i> Countries</h3>',
+                'heading' => '<h3 class="panel-title"><i class="glyphicon glyphicon-th-list"></i> </h3>',
 //                'before' => '<div style="margin-top:8px">{summary}</div>',
                 'before' => '<div style="margin-top:8px;color: red">Tips:这里可以写点提示信息</div>',
             ],
@@ -162,10 +164,10 @@ $this->params['breadcrumbs'][] = $this->title;
         },
 
         'columns' => [
-            [
-                'class' => 'kartik\grid\CheckboxColumn',//复选框
-                'rowSelectedClass' => GridView::TYPE_INFO,//选中颜色
-            ],
+//            [
+//                'class' => 'kartik\grid\CheckboxColumn',//复选框
+//                'rowSelectedClass' => GridView::TYPE_INFO,//选中颜色
+//            ],
             [
                 'class' => 'kartik\grid\ExpandRowColumn',
                 'width' => '3%',

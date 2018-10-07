@@ -24,6 +24,9 @@ return [
     'Please Sign in to start your session' => '请登录',
     'username' => '账号',
     'password' => '密码',
-    'CMS-YII2.0' => 'CMS-YII2.0'
+    'CMS-YII2.0' => 'CMS-YII2.0',
+    'Added Successfully' => '添加成功',
+    'Updated Successfully' => '更新成功',
+    'Deleted Successfully' => '删除成功',
 
 ];

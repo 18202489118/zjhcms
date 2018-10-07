@@ -110,15 +110,15 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    /**
-     * error action.TODO
-     */
-    public function actionError()
-    {
-        if($error=Yii::app()->errorHandler->error){
-            $this->render('error1', $error);
-        }
-    }
+//    /**
+//     * error action.TODO
+//     */
+//    public function actionError()
+//    {
+//        if($error=Yii::$app->errorHandler->error){
+//            $this->render('error1', $error);
+//        }
+//    }
 
     /**
      * 发送邮件

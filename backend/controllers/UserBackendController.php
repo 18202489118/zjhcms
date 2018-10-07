@@ -36,11 +36,17 @@ class UserBackendController extends Controller
     public function actionIndex()
     {
         $searchModel = new UserBackendSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        $params = Yii::$app->request->queryParams;
+        $dataProvider = $searchModel->search($params);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'res' => isset($params['res']) ? $params['res'] : [
+                'flag' => false,
+                'msg' => ''
+            ]
         ]);
     }
 
@@ -51,8 +57,13 @@ class UserBackendController extends Controller
      */
     public function actionView($id)
     {
+        $params = Yii::$app->request->get('res');
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'res' => isset($params) ? $params : [
+                'flag' => false,
+                'msg' => ''
+            ]
         ]);
     }
 
@@ -64,7 +75,6 @@ class UserBackendController extends Controller
     public function actionCreate()
     {
         $model = new UserBackend();
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -86,11 +96,14 @@ class UserBackendController extends Controller
         $post = Yii::$app->request->post();
 
         if (isset($post['UserBackend'])) {
-            if($model->password_hash != $post['UserBackend']['password_hash']){
+            if ($model->password_hash != $post['UserBackend']['password_hash']) {
                 $post['UserBackend']['password_hash'] = Yii::$app->security->generatePasswordHash($post['UserBackend']['password_hash']);
             }
-            if($model->load($post) && $model->save()){
-                return $this->redirect(['view', 'id' => $model->id]);
+            if ($model->load($post) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id, 'res' => [
+                    'flag' => true,
+                    'msg' => Yii::t('com', 'Updated Successfully')
+                ]]);
             }
         } else {
             return $this->render('update', [
@@ -109,7 +122,10 @@ class UserBackendController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['index', 'res' => [
+            'flag' => true,
+            'msg' => Yii::t('com', 'Deleted Successfully')
+        ]]);
     }
 
     /**
@@ -131,7 +147,7 @@ class UserBackendController extends Controller
     /**
      *  create new user
      */
-    public function actionSignup ()
+    public function actionSignup()
     {
         // 实例化一个表单模型，这个表单模型我们还没有创建，等一下后面再创建
         $model = new \backend\models\SignupForm();
@@ -141,7 +157,10 @@ class UserBackendController extends Controller
         // $model->signup() 方法, 是我们要实现的具体的添加用户操作
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
             // 添加完用户之后，我们跳回到index操作即列表页
-            return $this->redirect(['index']);
+            return $this->redirect(['index', 'res' => [
+                'flag' => true,
+                'msg' => Yii::t('com', 'Added Successfully')
+            ]]);
         }
 
         // 下面这一段是我们刚刚分析的第一个小问题的实现
