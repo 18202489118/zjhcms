@@ -35,12 +35,7 @@ return [
         ],
         'gridview' => [
             'class' => '\kartik\grid\Module',
-            'downloadAction' => 'gridview/export/download',
-//             'i18n' => [
-//                'class' => 'yii\i18n\PhpMessageSource',
-//                'basePath' => '@kvgrid/messages',
-//                'forceTranslation' => true
-//            ]
+            'downloadAction' => 'gridview/export/download'
         ],
     ],
     'as theme' => [
@@ -60,8 +55,7 @@ return [
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
-        'session' => [
-            // this is the name of the session cookie used for login on the backend
+        'session' => [  
             'name' => 'advanced-backend',
         ],
         'log' => [
